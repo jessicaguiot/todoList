@@ -14,6 +14,8 @@
 		D878B0E025405BA00070712C /* todoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D878B0DE25405BA00070712C /* todoList.xcdatamodeld */; };
 		D878B0E225405BA30070712C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D878B0E125405BA30070712C /* Assets.xcassets */; };
 		D878B0E525405BA30070712C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D878B0E325405BA30070712C /* LaunchScreen.storyboard */; };
+		D878B0ED25405FC10070712C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878B0EC25405FC10070712C /* Task.swift */; };
+		D878B0F1254063560070712C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D878B0F0254063560070712C /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		D878B0E125405BA30070712C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D878B0E425405BA30070712C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D878B0E625405BA30070712C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D878B0EC25405FC10070712C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		D878B0EE254063460070712C /* todoList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = todoList.entitlements; sourceTree = "<group>"; };
+		D878B0F0254063560070712C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D878B0F1254063560070712C /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +50,7 @@
 			children = (
 				D878B0D425405BA00070712C /* todoList */,
 				D878B0D325405BA00070712C /* Products */,
+				D878B0EF254063560070712C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +65,7 @@
 		D878B0D425405BA00070712C /* todoList */ = {
 			isa = PBXGroup;
 			children = (
+				D878B0EE254063460070712C /* todoList.entitlements */,
 				D878B0D525405BA00070712C /* AppDelegate.swift */,
 				D878B0D725405BA00070712C /* SceneDelegate.swift */,
 				D878B0D925405BA00070712C /* ViewController.swift */,
@@ -66,8 +74,17 @@
 				D878B0E325405BA30070712C /* LaunchScreen.storyboard */,
 				D878B0E625405BA30070712C /* Info.plist */,
 				D878B0DE25405BA00070712C /* todoList.xcdatamodeld */,
+				D878B0EC25405FC10070712C /* Task.swift */,
 			);
 			path = todoList;
+			sourceTree = "<group>";
+		};
+		D878B0EF254063560070712C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D878B0F0254063560070712C /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +160,7 @@
 			files = (
 				D878B0DA25405BA00070712C /* ViewController.swift in Sources */,
 				D878B0D625405BA00070712C /* AppDelegate.swift in Sources */,
+				D878B0ED25405FC10070712C /* Task.swift in Sources */,
 				D878B0D825405BA00070712C /* SceneDelegate.swift in Sources */,
 				D878B0E025405BA00070712C /* todoList.xcdatamodeld in Sources */,
 			);
@@ -288,6 +306,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = todoList/todoList.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2V8P924DLJ;
 				INFOPLIST_FILE = todoList/Info.plist;
@@ -306,6 +325,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = todoList/todoList.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2V8P924DLJ;
 				INFOPLIST_FILE = todoList/Info.plist;
